@@ -1,1 +1,1 @@
-{"name":"devlocatorApp","version":"0.0.1","private":true,"scripts":{"start":"node node_modules/react-native/local-cli/cli.js start"},"dependencies":{"react-native":"0.79.2"}}
+{"name":"devlocatorApp","version":"0.0.1","private":true,"scripts":{"start":"node node_modules/react-native/local-cli/cli.js start"},"dependencies":{"react":"^19.1.0","react-native":"^0.79.2","react-native-vector-icons":"^10.2.0","react-navigation":"^5.0.0"},"devDependencies":{"@typescript-eslint/eslint-plugin":"^8.33.1","@typescript-eslint/parser":"^8.33.1","eslint":"^9.28.0"}}
