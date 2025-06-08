@@ -9,14 +9,22 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~5.0.4",
+    "d3-geo": "^3.1.1",
     "expo": "~53.0.10",
     "expo-status-bar": "~2.2.3",
+    "prop-types": "^15.8.1",
     "react": "19.0.0",
-    "react-native": "0.79.3"
+    "react-dom": "19.0.0",
+    "react-native": "0.79.3",
+    "react-native-maps": "1.20.1",
+    "react-native-web": "^0.20.0",
+    "react-simple-maps": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "@types/react-simple-maps": "^3.0.6",
     "typescript": "~5.8.3"
   },
   "private": true
