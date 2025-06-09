@@ -6,13 +6,6 @@ import {
   Geography,
   Marker
 } from 'react-simple-maps';
-import { fetchGitHubUser } from '../api'; // Only this function exists, remove fetchNearbyUsers
-
-// Add types if not already globally declared
-type GeographyType = {
-  rsmKey: string;
-  [key: string]: any;
-};
 
 const geoUrl =
   'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
@@ -20,9 +13,9 @@ const geoUrl =
 const MapWeb: React.FC = () => {
   return (
     <div style={{ width: '100%', height: '100%' }}>
-      <ComposableMap projectionConfig={{ scale: 200 }}>
+      <ComposableMap projectionConfig={{ scale: 150 }}>
         <Geographies geography={geoUrl}>
-          {({ geographies }: { geographies: GeographyType[] }) =>
+          {({ geographies }: { geographies: any[] }) =>
             geographies.map((geo) => (
               <Geography key={geo.rsmKey} geography={geo} />
             ))

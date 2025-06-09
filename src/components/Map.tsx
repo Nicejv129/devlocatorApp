@@ -1,13 +1,14 @@
 // src/components/Map.tsx
 import { Platform } from 'react-native';
 import type { FC } from 'react';
+import type { MapComponentProps } from '../types';
 
-const mapFactory = Platform.select<() => FC>({
-  ios: () => require('./MapNative').default,
-  android: () => require('./MapNative').default,
-  web: () => require('./MapWeb').default,
-});
+let MapComponent: FC<MapComponentProps>;
 
-const Map = mapFactory ? mapFactory() : () => null;
+if (Platform.OS === 'web') {
+  MapComponent = require('./MapWeb').default;
+} else {
+  MapComponent = require('./MapNative').default;
+}
 
-export default Map;
+export default MapComponent;
